@@ -19,8 +19,16 @@
     function errorClick() {
       window.someVar.error = 'error'
     }
+    function promiseErrorClick() {
+      new Promise((resolve, reject) => {
+        window.someVar.error = 'error'
+      }).then(res => {
+        console.log(res)
+      })
+    }
 
   </script>
+  <script src="abc.js" defer></script>
 </body>
 
 </html>
