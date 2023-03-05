@@ -14,7 +14,6 @@ export function injectJsError() {
       let lastEvent = getLastEvent(); //获取用户最后一个操作
       // 脚本加载错误
       if (event.target && (event.target.src || event.target.href)) {
-        console.log(2222);
         tracker.send({
           kind: "stability", //大类
           type: "error", //小类

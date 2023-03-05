@@ -59,7 +59,6 @@ export function getSelectorRes(pathOrTarget) {
     })
     .map((element) => {
       let selector = "";
-      console.log(element, 222);
       if (element.id) {
         return `#${element.nodeName.toLowerCase()}#${element.id}`;
       } else if (element.className && typeof element.className === "string") {

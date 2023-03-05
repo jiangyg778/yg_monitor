@@ -1,8 +1,12 @@
+/**
+ * @description: 空白屏监控
+ */
+
 import onload from "../utils/onload";
 import tracker from "../utils/tracker";
 
 export function blankScreen() {
-  let wrapperElements = ["html", "body", "#container", ".content.main"]; // 用于判断是否是空白屏的元素
+  let wrapperElements = ["html", "body", "#container", ".content"]; // 用于判断是否是空白屏的元素
   let emptyPoints = 0; // 用于记录空白屏的次数
 
   function getSelector(element) {
