@@ -1,3 +1,7 @@
+/**
+ * @description: js错误监控
+ */
+
 import getLastEvent from "../utils/getLastEvent";
 import { getSelectorJs, getSelectorRes } from "../utils/getSelector";
 import tracker from "../utils/tracker";

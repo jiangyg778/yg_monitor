@@ -11,6 +11,14 @@ module.exports = {
   },
   devServer: {
     static: path.join(__dirname, "dist"),
+    onBeforeSetupMiddleware: function (devServer) {
+      devServer.app.get("/success", function (req, res) {
+        res.json({ id: 1 });
+      });
+      devServer.app.post("/error", function (req, res) {
+        res.sendStatus(500);
+      });
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
